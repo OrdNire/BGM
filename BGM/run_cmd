@@ -1,52 +1,52 @@
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.MM_test \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.MM_test \
                           --max_topK 15 --noise_rate 1
 
 python inference_SIRMM.py --dataset DOTA \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
                           --max_topK 15 --noise_rate 1 --abl_setting hard_way --test_noise
 
 python inference_SIRMM.py --dataset DOTA \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
                           --max_topK 15 --noise_rate 1 --abl_setting ind_ret --test_noise
 
 python inference_SIRMM.py --dataset DOTA \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/DOTA.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
                           --max_topK 15 --noise_rate 1 --abl_setting MT --test_noise
 
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind.MM_ddp \
                           --max_topK 100 --abl_setting ind
 
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
                           --max_topK 100 --abl_setting ret
 
 python inference_SIRMM.py --dataset Cloud-SIR \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
                           --max_topK 15 --noise_rate 1 --abl_setting hard_way --test_noise
 
 python inference_SIRMM.py --dataset Cloud-SIR \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
                           --max_topK 100 --noise_rate 1 --abl_setting MT --test_noise
 
 python inference_SIRMM.py --dataset Cloud-SIR \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
                           --max_topK 100 --noise_rate 1 --abl_setting ind_ret --test_noise
 
 python inference_SIRMM.py --dataset Cloud-SIR \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_20.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_100.class_loss_BCE.adam3.5e-05.abl_set_PP.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/Cloud-SIR.6layer.12heads.bsz_32.eps_20.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_100.class_loss_BCE.adam3.5e-05.abl_set_PP.MM_ddp \
                           --max_topK 15 --noise_rate 1 --abl_setting PP --test_noise --distance_prc 100
 
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_hard_way.MM_ddp \
                           --max_topK 15 --abl_setting hard_way --noise_rate 1 --test_noise
 
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_ind_ret.MM_ddp \
                           --max_topK 15 --abl_setting ind_ret --noise_rate 1 --test_noise
 
 python inference_SIRMM.py --dataset MultiScene-Clean \
-                          --model_path /home/jiangfanzhuo/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
+                          --model_path /home/###/SpaceIR/results/MultiScene-Clean.6layer.12heads.bsz_32.eps_30.warm_eps_50.hidden_768.contr_l_0.1.distance_prc_10.class_loss_BCE.adam3.5e-05.abl_set_MT.MM_ddp \
                           --max_topK 15 --abl_setting MT --noise_rate 1 --test_noise
 
