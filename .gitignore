@@ -1,0 +1,10 @@
+BGM/data_product/
+BGM/image_captioning/
+BGM/other_methods/
+BGM/models/base/
+BGM/models/CLIP/
+BGM/models/CTrans/
+BGM/models/Q2L/
+BGM/draw_pic/
+BGM/data/
+BGM/backup/
