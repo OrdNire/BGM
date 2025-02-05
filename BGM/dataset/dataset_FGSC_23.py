@@ -1,0 +1,96 @@
+import os
+import random
+import re
+
+import numpy as np
+import torch.utils.data
+from PIL import Image
+
+import pickle as pkl
+# Per-channel mean and SD values in BGR order
+_MEAN = [0.406, 0.456, 0.485]
+_SD = [0.225, 0.224, 0.229]
+
+def split_filename(filename):
+    # 使用正则表达式查找第一个数字的位置
+    match = re.search(r'(\d+)', filename)
+    if match:
+        index = match.start()
+        # 分割文件名
+        name_part = filename[:index]
+        number_part = filename[index:]
+        return name_part, number_part
+    else:
+        # 如果没有找到数字，返回原文件名
+        return filename, ''
+
+class FGSC_23(torch.utils.data.Dataset):
+    """Common dataset."""
+
+    def __init__(self, meta_path, data_path, noise_data_path, split, transform, meta_file):
+        assert os.path.exists(
+            meta_path), "Meta path '{}' not found".format(meta_path)
+        assert os.path.exists(
+            data_path), "Data path '{}' not found".format(data_path)
+        self._meta_path, self._data_path, self._split, self._transform = meta_path, data_path, split, transform
+        self._meta_file = meta_file
+        self._noise_data_path = noise_data_path
+        self._construct_db()
+
+    def _construct_db(self):
+        """Constructs the db."""
+        # Compile the split data path
+        self._db = []
+        with open(os.path.join(self._meta_path, self._meta_file), 'rb') as fin:
+            gnd = pkl.load(fin)
+            if self._split == 'query':
+                for i in range(len(gnd["qimlist"])):
+                    im_fn = gnd["qimlist"][i]
+                    label_idx = gnd["qclasses"][i]
+                    im_path = os.path.join(
+                        self._data_path, str(label_idx), im_fn)
+                    # import pdb
+                    # pdb.set_trace()
+                    self._db.append({"im_path": im_path, "qclass": gnd['qclasses'][i], "idx": i})
+
+            elif self._split == 'gallery':
+                for i in range(len(gnd["gimlist"])):
+                    im_fn = gnd["gimlist"][i]
+                    label_idx = gnd["gclasses"][i]
+                    if gnd["sim_count"][i] < 1.0:
+                        im_path = os.path.join(
+                            self._noise_data_path, str(label_idx), im_fn
+                        )
+                    else:
+                        im_path = os.path.join(
+                            self._data_path, str(label_idx), im_fn)
+                    self._db.append({"im_path": im_path, "class": gnd["gclasses"][i], "idx": i})
+
+            elif self._split == 'db':
+                for i in range(len(gnd["imlist"])):
+                    im_fn = gnd["imlist"][i]
+                    label_idx = gnd["imclasses"][i]
+                    im_path = os.path.join(
+                        self._data_path, str(label_idx), im_fn)
+                    self._db.append({"im_path": im_path, "class": gnd["imclasses"][i],  "idx": i})
+
+    def __getitem__(self, index):
+        # Load the image
+        batch = {}
+        try:
+            im = Image.open(self._db[index]["im_path"])
+            im = im.convert("RGB")
+        except:
+            print('error: ', self._db[index]["im_path"])
+        im = self._transform(im)
+        batch["im"] = im
+        if "class" in self._db[index].keys():
+            batch["onehot_label"] = self._db[index]['class']
+        else:
+            batch["onehot_label"] = self._db[index]['qclass']
+        batch["idx"] = self._db[index]['idx']
+        return batch
+
+
+    def __len__(self):
+        return len(self._db)

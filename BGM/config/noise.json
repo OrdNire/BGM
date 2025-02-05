@@ -1,0 +1,8 @@
+{
+  "perlin_noise_level": [
+    {"shape": 512, "res": 1, "octaves": -1},
+    {"shape": 512, "res": 2, "octaves": -1},
+    {"shape": 512, "res": 4, "octaves": -1},
+    {"shape": 512, "res": 8, "octaves": -1}
+  ]
+}
