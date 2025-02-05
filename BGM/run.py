@@ -13,7 +13,7 @@ if __name__ == '__main__':
     distance_prc = 10
     contr_lambda = 0.1
 
-    dist_launch = "CUDA_VISIBLE_DEVICES=0,1 WORLD_SIZE=2 NCCL_TIMEOUT=6000 /home/jiangfanzhuo/.conda/envs/pt39/bin/python -W ignore -m torch.distributed.launch --master_port 12351 --nproc_per_node=2 " \
+    dist_launch = "CUDA_VISIBLE_DEVICES=0,1 WORLD_SIZE=2 NCCL_TIMEOUT=6000 /home/###/.conda/envs/pt39/bin/python -W ignore -m torch.distributed.launch --master_port 12351 --nproc_per_node=2 " \
                "--nnodes=1"
 
     os.system(f"{dist_launch} "

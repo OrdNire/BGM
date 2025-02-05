@@ -53,9 +53,9 @@ def get_data(args):
                                         ])
 
     if dataset == 'DLRSD':
-        args.image_root = "/mnt/data/jiangfanzhuo/DLRSD_CGSIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/DLRSD_CGSIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/DLRSD_CGSIR/test_json"
+        args.image_root = "/mnt/data/###/DLRSD_CGSIR/images/"
+        args.train_datas_path = "/mnt/data/###/DLRSD_CGSIR/train_json"
+        args.test_datas_path = "/mnt/data/###/DLRSD_CGSIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -93,9 +93,9 @@ def get_data(args):
                                     collate_fn=partial(collate_fn_T2I, tokenizer=tokenizer))
 
     elif dataset == "MultiScene-Clean":
-        args.image_root = "/mnt/data/jiangfanzhuo/MSC_CGSIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/MSC_CGSIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/MSC_CGSIR/test_json"
+        args.image_root = "/mnt/data/###/MSC_CGSIR/images/"
+        args.train_datas_path = "/mnt/data/###/MSC_CGSIR/train_json"
+        args.test_datas_path = "/mnt/data/###/MSC_CGSIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -143,9 +143,9 @@ def get_data(args):
             return query_loader, gallery_loader
 
     elif dataset == "DOTA":
-        args.image_root = "/mnt/data/jiangfanzhuo/DOTA_FGSIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/DOTA_FGSIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/DOTA_FGSIR/test_json"
+        args.image_root = "/mnt/data/###/DOTA_FGSIR/images/"
+        args.train_datas_path = "/mnt/data/###/DOTA_FGSIR/train_json"
+        args.test_datas_path = "/mnt/data/###/DOTA_FGSIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -190,9 +190,9 @@ def get_data(args):
             return query_loader, gallery_loader
 
     elif dataset == "RICE-CG":
-        args.image_root = "/mnt/data/jiangfanzhuo/RICE_CGSIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/RICE_CGSIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/RICE_CGSIR/test_json"
+        args.image_root = "/mnt/data/###/RICE_CGSIR/images/"
+        args.train_datas_path = "/mnt/data/###/RICE_CGSIR/train_json"
+        args.test_datas_path = "/mnt/data/###/RICE_CGSIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -236,9 +236,9 @@ def get_data(args):
         else:
             return query_loader, gallery_loader
     elif dataset == "RICE-SIR":
-        args.image_root = "/mnt/data/jiangfanzhuo/RICE_SIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/RICE_SIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/RICE_SIR/test_json"
+        args.image_root = "/mnt/data/###/RICE_SIR/images/"
+        args.train_datas_path = "/mnt/data/###/RICE_SIR/train_json"
+        args.test_datas_path = "/mnt/data/###/RICE_SIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -288,9 +288,9 @@ def get_data(args):
         else:
             return query_loader, gallery_loader
     elif dataset == "Cloud-SIR":
-        args.image_root = "/mnt/data/jiangfanzhuo/Cloud_SIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/Cloud_SIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/Cloud_SIR/test_json"
+        args.image_root = "/mnt/data/###/Cloud_SIR/images/"
+        args.train_datas_path = "/mnt/data/###/Cloud_SIR/train_json"
+        args.test_datas_path = "/mnt/data/###/Cloud_SIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:
@@ -339,9 +339,9 @@ def get_data(args):
         else:
             return query_loader, gallery_loader
     elif dataset == "CUHK-SIR":
-        args.image_root = "/mnt/data/jiangfanzhuo/CUHK_SIR/images/"
-        args.train_datas_path = "/mnt/data/jiangfanzhuo/CUHK_SIR/train_json"
-        args.test_datas_path = "/mnt/data/jiangfanzhuo/CUHK_SIR/test_json"
+        args.image_root = "/mnt/data/###/CUHK_SIR/images/"
+        args.train_datas_path = "/mnt/data/###/CUHK_SIR/train_json"
+        args.test_datas_path = "/mnt/data/###/CUHK_SIR/test_json"
         with open(args.train_datas_path, "r", encoding="utf-8") as file:
             train_datas = json.load(file)
         with open(args.test_datas_path, "r", encoding="utf-8") as file:

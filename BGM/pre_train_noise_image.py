@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-cloud_mask_dir = "/mnt/data/jiangfanzhuo/custom_cloud_mask"
+cloud_mask_dir = "/mnt/data/###/custom_cloud_mask"
 
 seed = 42
 random.seed(seed)
@@ -54,7 +54,7 @@ def construct_noise(img):
 if __name__ == '__main__':
     data_root = "./data/"
     meta_file = "DLRSD_retrieval_noise0.pkl"
-    save_path = "/mnt/data/jiangfanzhuo/train_noise_data/DLRSD"
+    save_path = "/mnt/data/###/train_noise_data/DLRSD"
 
     meta_dir = os.path.join(data_root, "DLRSD")
     data_dir = os.path.join(data_root, "DLRSD/DLRSD", "UCMerced_LandUse/UCMerced_LandUse/Images")

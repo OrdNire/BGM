@@ -88,8 +88,8 @@ def baseAR_inference(
 
     logger.info(f"return noise cnt by query: {noise_cnt}")
     logger.info(f"return noise cnt: {sum(noise_cnt)}")
-    if os.path.isfile(os.path.join("/home/jiangfanzhuo/SpaceIR/data", args.dataset, f"valid_query_idx_{args.beam_size}.pkl")):
-        with open(os.path.join("/home/jiangfanzhuo/SpaceIR/data", args.dataset, f"valid_query_idx_{args.beam_size}.pkl"),
+    if os.path.isfile(os.path.join("/home/###/SpaceIR/data", args.dataset, f"valid_query_idx_{args.beam_size}.pkl")):
+        with open(os.path.join("/home/###/SpaceIR/data", args.dataset, f"valid_query_idx_{args.beam_size}.pkl"),
                   "rb") as f:
             valid_query_idx = pickle.load(f)
     else:

@@ -145,7 +145,7 @@ def get_data(args):
 
         meta_dir = os.path.join(meta_root, "FGSC-23")
         data_dir = os.path.join(data_root, "FGSC-23/FGSC-23")
-        noise_data_dir = "/mnt/data/jiangfanzhuo/noise_data/FGSC-23/noise_images_5.0"
+        noise_data_dir = "/mnt/data/###/noise_data/FGSC-23/noise_images_5.0"
         query_dataset = FGSC_23(meta_dir, os.path.join(data_dir, "test"), noise_data_dir, "query", testTransform, meta_file=meta_file)
         gallery_dataset = FGSC_23(meta_dir, os.path.join(data_dir, "train"), noise_data_dir, "gallery", testTransform, meta_file=meta_file)
         train_gallery_dataset = FGSC_23(meta_dir, os.path.join(data_dir, "train"), noise_data_dir, "gallery", trainTransform,

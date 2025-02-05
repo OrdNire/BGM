@@ -12,8 +12,8 @@ if __name__ == '__main__':
     # npmem_file = "data/BigEarthNet-19" + '/' + "BEN" + tag + split + '.dat'
     # noise_npmem_file = "data/BigEarthNet-19" + '/' + "BEN" + tag + "noise_" + split + '.dat'
     #
-    # meta_path = "/home/jiangfanzhuo/SpaceIR/data/BigEarthNet-19"
-    # data_path = "/home/jiangfanzhuo/SpaceIR/data/BigEarthNet-19/BigEarthNet-19/BigEarthNet-S2"
+    # meta_path = "/home/###/SpaceIR/data/BigEarthNet-19"
+    # data_path = "/home/###/SpaceIR/data/BigEarthNet-19/BigEarthNet-19/BigEarthNet-S2"
     # meta_file = "BEN_sub_retrieval.pkl"
     #
     # if os.path.exists(npmem_file) == False:
@@ -81,8 +81,8 @@ if __name__ == '__main__':
     tag = '_subset_'
     split = "db"
 
-    meta_path = "/home/jiangfanzhuo/SpaceIR/data/BigEarthNet-19"
-    data_path = "/home/jiangfanzhuo/SpaceIR/data/BigEarthNet-19/BigEarthNet-19/BigEarthNet-S2"
+    meta_path = "/home/###/SpaceIR/data/BigEarthNet-19"
+    data_path = "/home/###/SpaceIR/data/BigEarthNet-19/BigEarthNet-19/BigEarthNet-S2"
     meta_file = "BEN_sub_retrieval.pkl"
 
     count = np.prod([12,120,120])
